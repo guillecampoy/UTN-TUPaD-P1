@@ -1,0 +1,33 @@
+# macOS specific files
+.DS_Store
+
+# System files
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Python specific files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.env
+.venv
+venv/
+ENV/
+env/
+*.egg
+*.egg-info/
+dist/
+build/
+*.pytest_cache/
+.tox/
+.mypy_cache/
+.pytest_cache/
+.ipynb_checkpoints/
