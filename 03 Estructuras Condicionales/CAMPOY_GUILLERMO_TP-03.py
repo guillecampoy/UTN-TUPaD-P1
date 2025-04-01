@@ -43,7 +43,7 @@ def print_footer():
 print_header()
 
 # Ejercicio 1 solicitud de edad
-print_separator("Actividad 1 - ¿Mayor o menor de edad?")
+print_separator("Actividad 1 - ¿Es mayor de edad?")
 edad = int(input("Ingrese su edad: "))
 if edad > 18:
     print(Fore.GREEN + "Es mayor de edad")
@@ -112,5 +112,32 @@ elif media == mediana and mediana == moda:
 else:
     print(Fore.YELLOW + "Indeterminado")      
 
+#Ejercicio 7 ¿Termina en vocal?
+print_separator("Actividad 7 - ¿Termina en vocal?")
+
+# Variables auxiliares
+listadoVocales = ['a', 'e', 'i', 'o', 'u']
+
+palabra = input("Ingrese una palabra: ")
+if palabra[-1].lower() in listadoVocales:
+    print(Fore.GREEN + palabra +"!")
+else:
+    print(Fore.RED + palabra)
+
+# Ejercicio 8 Tratamiento de cadenas continuación
+print_separator("Actividad 8 - ¿Cómo prefiere su nombre?")
+nombre = input("Ingrese su nombre: ")
+print("1- Si quiere su nombre en mayúsculas. Por ejemplo JUAN")
+print("2- Si quiere su nombre en minúsculas. Por ejemplo juan")
+print("3- Si quiere su nombre con primera letra mayúsculas. Por ejemplo Juan")
+opcion = int(input("Ingrese una opción: "))
+if opcion == 1:
+    print(Fore.GREEN + nombre.upper())
+elif opcion == 2:
+    print(Fore.GREEN + nombre.lower())
+elif opcion == 3:
+    print(Fore.GREEN + nombre.capitalize())
+else:
+    print(Fore.RED + "Opción incorrecta")
 
 print_footer()
