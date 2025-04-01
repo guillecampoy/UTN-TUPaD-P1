@@ -158,4 +158,34 @@ elif magnitud >= 7.0:
 else:
     print(Fore.RED + "Error ingreso de magnitud")
 
+# Ejercicio 10 Estacion del año
+print_separator("Actividad 10 - Estación del año")
+hemisferio = input("Ingrese el hemisferio (N/S): ").upper()
+mes = int(input("Ingrese el mes (1-12): "))
+dia = int(input("Ingrese el día (1-31): "))
+if hemisferio == 'N':
+    if (mes == 3 and dia >= 21) or (mes > 3 and mes < 6) or (mes == 6 and dia <= 20):
+        print(Fore.GREEN + "Primavera")
+    elif (mes == 6 and dia >= 21) or (mes > 6 and mes < 9) or (mes == 9 and dia <= 20):
+        print(Fore.GREEN + "Verano")
+    elif (mes == 9 and dia >= 21) or (mes > 9 and mes < 12) or (mes == 12 and dia <= 20):
+        print(Fore.GREEN + "Otoño")
+    elif (mes == 12 and dia >= 21) or (mes < 3) or (mes == 3 and dia <= 20):
+        print(Fore.GREEN + "Invierno")
+    else:
+        print(Fore.RED + "Error ingreso de fecha")
+elif hemisferio == 'S':
+    if (mes == 3 and dia >= 21) or (mes > 3 and mes < 6) or (mes == 6 and dia <= 20):
+        print(Fore.GREEN + "Otoño")
+    elif (mes == 6 and dia >= 21) or (mes > 6 and mes < 9) or (mes == 9 and dia <= 20):
+        print(Fore.GREEN + "Invierno")
+    elif (mes == 9 and dia >= 21) or (mes > 9 and mes < 12) or (mes == 12 and dia <= 20):
+        print(Fore.GREEN + "Primavera")
+    elif (mes == 12 and dia >= 21) or (mes < 3) or (mes == 3 and dia <= 20):
+        print(Fore.GREEN + "Verano")
+    else:
+        print(Fore.RED + "Error ingreso de fecha")
+else:
+    print(Fore.RED + "Error ingreso de Hemisferio")
+
 print_footer()
