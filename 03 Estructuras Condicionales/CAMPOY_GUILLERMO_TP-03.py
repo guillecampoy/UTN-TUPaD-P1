@@ -136,8 +136,26 @@ if opcion == 1:
 elif opcion == 2:
     print(Fore.GREEN + nombre.lower())
 elif opcion == 3:
-    print(Fore.GREEN + nombre.capitalize())
+    print(Fore.GREEN + nombre.title())
 else:
     print(Fore.RED + "Opción incorrecta")
+
+# Ejercicio 9 Magnitud de terremoto
+print_separator("Actividad 9 - Magnitud de terremoto")
+magnitud = float(input("Ingrese la magnitud del terremoto: "))
+if magnitud < 3.0:
+    print(Fore.GREEN + "Muy leve (imperceptible)")
+elif magnitud >= 3.0 and magnitud < 4.0:
+    print(Fore.GREEN + "Leve (ligeramente perceptible)" )
+elif magnitud >= 4.0 and magnitud < 5.0:
+    print(Fore.YELLOW + "Moderado (sentido por las personas, pero generalmente no causa daños)")
+elif magnitud >= 5.0 and magnitud < 6.0:
+    print(Fore.YELLOW + "Fuerte (puede causar daños estructuras débiles)")
+elif magnitud >= 6.0 and magnitud < 7.0:
+    print(Fore.RED + "Muy Fuerte (puede causar daños significativos)")
+elif magnitud >= 7.0:
+    print(Fore.RED + "Extremo (puede causar graves daños a gran escala)")
+else:
+    print(Fore.RED + "Error ingreso de magnitud")
 
 print_footer()
