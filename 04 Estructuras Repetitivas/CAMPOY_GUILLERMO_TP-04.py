@@ -106,5 +106,19 @@ print_separator("Actividad 6 - Números pares entre 0 y 100 de forma decreciente
 for i in range(100, -1, -2):
     print(Fore.GREEN + str(i))
 
+# Ejercicio 7 calcular la suma entre 0 y un número dado por el usuario, considerando ingreso de número negativo
+
+print_separator("Actividad 7 - Sumar números hasta un número dado")
+numero = int(input("Ingrese un número entero positivo: "))
+suma = 0
+# Se valida que el número ingresado sea positivo
+while numero < 0:
+    print(Fore.RED + "El número debe ser positivo.")
+    numero = int(input("Ingrese un número entero positivo: "))   
+
+# Con este flujo se incluye la cota superior en la suma 
+for i in range(0, numero + 1):
+    suma += i
+print(Fore.GREEN + f"La suma de los números entre 0 y {numero} es: {suma}")
 
 print_footer()
