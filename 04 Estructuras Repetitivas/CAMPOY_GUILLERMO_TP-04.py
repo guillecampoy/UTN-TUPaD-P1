@@ -101,6 +101,10 @@ while numero_usuario != numero_aleatorio:
 intentos += 1
 print(Fore.GREEN + f"¡Felicidades! Adivinaste el número correcto en {intentos} intentos.")
 
+# Ejercicio 6 listar por pantalla números pares entre 0 y 100 de forma decreciente
+print_separator("Actividad 6 - Números pares entre 0 y 100 de forma decreciente")
+for i in range(100, -1, -2):
+    print(Fore.GREEN + str(i))
 
 
 print_footer()
