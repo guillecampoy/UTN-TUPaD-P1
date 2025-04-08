@@ -145,5 +145,13 @@ print(Fore.GREEN + f"Cantidad de números impares: {cantidad_impares}")
 print(Fore.GREEN + f"Cantidad de números positivos: {cantidad_positivos}")
 print(Fore.GREEN + f"Cantidad de números negativos: {cantidad_negativos}")
 
+# Ejercicio 9 ingresar una serie de números enteros y calcular la media
+print_separator("Actividad 9 - Calcular la media")
+cantidad_numeros = 100
+suma = 0
+for i in range (cantidad_numeros):
+    numero = int(input("Ingrese un número entero: "))
+    suma += numero
+print(Fore.GREEN + f"La media de los números ingresados es: {suma / cantidad_numeros}")
 
 print_footer()
