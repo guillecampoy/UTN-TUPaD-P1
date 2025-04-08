@@ -85,6 +85,21 @@ while valor != 0:
     valor = int(input("Ingrese un valor (0 para salir): "))
 print(Fore.GREEN + f"La suma de los valores ingresados es: {suma}") 
 
+# Ejercicio 5 adivinar número aleatorio entre 0 y 9. Se debe mostrar la cantidad de intentos
+print_separator("Actividad 5 - Adivinar número aleatorio")
+import random
+numero_aleatorio = random.randint(0, 9)
+intentos = 0
+numero_usuario = int(input("Adivina el número entre 0 y 9: "))
+while numero_usuario != numero_aleatorio:
+    intentos += 1
+    if numero_usuario < numero_aleatorio:
+        print(Fore.RED + "El número es mayor.")
+    else:
+        print(Fore.BLUE + "El número es menor.")
+    numero_usuario = int(input("Intenta nuevamente: "))
+intentos += 1
+print(Fore.GREEN + f"¡Felicidades! Adivinaste el número correcto en {intentos} intentos.")
 
 
 
