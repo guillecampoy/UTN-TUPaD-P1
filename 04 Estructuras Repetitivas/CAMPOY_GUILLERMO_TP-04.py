@@ -154,4 +154,28 @@ for i in range (cantidad_numeros):
     suma += numero
 print(Fore.GREEN + f"La media de los números ingresados es: {suma / cantidad_numeros}")
 
+# Ejercicio 10 invertir posiciones del numero ingresado, entrada: 543, salida: 345
+# Se pretende utilizar estructuras o bucles para resolver el problema
+print_separator("Actividad 10 - Invertir número")
+numero = int(input("Ingrese un número entero: "))
+numero_invertido = 0
+
+# Se utiliza un bucle while para invertir el número
+# No se contemplan casos como 3000, el mismo se convierte en 3 (no se consideran los 0 a izquierda)
+# se debe realizaar un tratamiento para números negativos
+# Se contempla el caso de números negativos como válido, manteniendo el signo
+
+signo = -1 if numero < 0 else 1
+numero = abs(numero)
+while numero > 0:
+    digito = numero % 10
+    numero_invertido = numero_invertido * 10 + digito
+    numero //= 10
+
+# Se multiplica por el signo para restaurar el valor original
+# Asumiendo que se invierte la posición de los números, pero respetamos el signo del mismo    
+numero_invertido *= signo
+
+print(Fore.GREEN + f"El número invertido es: {numero_invertido}")
+
 print_footer()
