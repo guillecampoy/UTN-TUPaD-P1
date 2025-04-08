@@ -47,4 +47,11 @@ print_separator("Actividad 1 - Números del 0 al 100")
 for i in range(0, 101):
     print(Fore.GREEN + str(i))
 
+# Ejercicio 2 solicitar un numero entero y determinar cantidad de dígitos
+print_separator("Actividad 2 - Cantidad de dígitos")
+numero = int(input("Ingrese un número entero: "))
+cantidad_digitos = len(str(abs(numero)))
+print(Fore.GREEN + f"La cantidad de dígitos del número {numero} es: {cantidad_digitos}")
+
+
 print_footer()
