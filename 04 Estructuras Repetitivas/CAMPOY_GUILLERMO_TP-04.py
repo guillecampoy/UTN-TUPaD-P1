@@ -75,6 +75,17 @@ print(Fore.GREEN + f"La suma de los números comprendidos entre {valor1} y {valo
 # Puede resultar un poco más confuso, pero es una opción válida.
 
 
+# Ejercicio 4 ingresar valores hasta obtener 0 (condición de salida) mostrar la suma de los valores ingresados
+print_separator("Actividad 4 - Sumar valores hasta ingresar 0")
+suma = 0  
+# Se realñiza primer lectura fuera del bucle para inicializar la variable
+valor = int(input("Ingrese un valor (0 para salir): "))
+while valor != 0:
+    suma += valor
+    valor = int(input("Ingrese un valor (0 para salir): "))
+print(Fore.GREEN + f"La suma de los valores ingresados es: {suma}") 
+
+
 
 
 print_footer()
