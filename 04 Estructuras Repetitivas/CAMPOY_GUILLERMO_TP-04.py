@@ -53,5 +53,28 @@ numero = int(input("Ingrese un número entero: "))
 cantidad_digitos = len(str(abs(numero)))
 print(Fore.GREEN + f"La cantidad de dígitos del número {numero} es: {cantidad_digitos}")
 
+# Ejercicio 3 sumar números enteros comprendidos entre dos valores dados por el usuario, excluyendo los valores
+print_separator("Actividad 3 - Sumar números enteros")
+valor1 = int(input("Ingrese el primer valor: "))
+valor2 = int(input("Ingrese el segundo valor: "))   
+suma = 0
+# Se verifica cuál es el menor de los dos valores ingresados
+# y se utiliza para el rango de la suma
+if valor1 < valor2:
+    for i in range(valor1 + 1, valor2):
+        suma += i
+else:
+# Se utiliza el valor2 como menor 
+# y se invierte el orden de los valores para usar la misma logica de suma    
+    for i in range(valor2 + 1, valor1):
+        suma += i
+print(Fore.GREEN + f"La suma de los números comprendidos entre {valor1} y {valor2} es: {suma}")
+
+#El código anterior incluso se puede resolver con un unico for, validando previamente que
+# el valor1 sea menor que el valor2, y si no lo es, se invierten los valores asignados en cada variable
+# Puede resultar un poco más confuso, pero es una opción válida.
+
+
+
 
 print_footer()
