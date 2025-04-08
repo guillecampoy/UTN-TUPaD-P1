@@ -121,4 +121,29 @@ for i in range(0, numero + 1):
     suma += i
 print(Fore.GREEN + f"La suma de los números entre 0 y {numero} es: {suma}")
 
+# Ejercicio 8 se deben ingresar 100 números enteros, luego indicar, cantidad de pares, 
+# cantidad impares, cantidad de negativos y cantidad de positivos
+print_separator("Actividad 8 - Contar números")
+cantidad_numeros = 100
+cantidad_pares = 0
+cantidad_impares = 0
+cantidad_positivos = 0
+cantidad_negativos = 0
+for i in range(cantidad_numeros):
+    numero = int(input("Ingrese un número entero: "))
+    if numero % 2 == 0:
+        cantidad_pares += 1
+    else:
+        cantidad_impares += 1
+#No se considera el cero como positivo ni negativo
+    if numero > 0:
+        cantidad_positivos += 1
+    elif numero < 0:
+        cantidad_negativos += 1
+print(Fore.GREEN + f"Cantidad de números pares: {cantidad_pares}")
+print(Fore.GREEN + f"Cantidad de números impares: {cantidad_impares}")
+print(Fore.GREEN + f"Cantidad de números positivos: {cantidad_positivos}")
+print(Fore.GREEN + f"Cantidad de números negativos: {cantidad_negativos}")
+
+
 print_footer()
