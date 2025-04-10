@@ -43,16 +43,71 @@ def print_footer():
 
 
 # Definiciones de funciones auxiliares para los ejercicios propuestos
-def saludo_en_funcion():
+def imprimir_saludo():
     # Función que imprime "Hola Mundo"
     print(Fore.GREEN + "Hola Mundo!")
+
+def saludar_usuario(nombre):
+    # Función que saluda al usuario por su nombre
+    print(Fore.GREEN + f"Hola {nombre}!")
+
+def informacion_personal(nombre, apellido, edad, residencia):
+    # Función que imprime la información personal del usuario
+    print(Fore.GREEN + f"Soy {nombre} {apellido}, tengo {edad} años y vivo en {residencia}.")
+
+def calcular_area_circulo(radio):
+    # Función que calcula el área de un círculo dado su radio
+    import math
+    area = math.pi * radio ** 2
+    return area
+def calcular_perimetro_circulo(radio):
+    # Función que calcula el perímetro de un círculo dado su radio
+    import math
+    perimetro = (2 * math.pi * radio)
+    return perimetro
 
 ## Programa principal
 print_header()
 
 # Ejercicio 1 implementación función Hola Mundo
 print_separator("Actividad 1 - Hola Mundo")
-saludo_en_funcion()
+
+#Llamada a función auxiliar
+imprimir_saludo()
+
+# Ejercicio 2 saludar usuario no nombre por parámetro
+print_separator("Actividad 2 - Saludo al usuario")
+nombre = input("Ingrese su nombre: ")
+
+#Llamada a función auxiliar
+saludar_usuario(nombre)
+
+# Ejercicio 3 información personal con formato
+print_separator("Actividad 3 - Información personal")
+nombre = input("Ingrese su nombre: ")
+apellido = input("Ingrese su apellido: ")
+edad = int(input("Ingrese su edad: "))
+residencia = input("Ingrese su lugar de residencia: ")
+
+#Llamada a función auxiliar
+informacion_personal (nombre, apellido, edad, residencia)
+
+#Ejercicio 4 cálculo de área y perímetro de un circulo
+print_separator("Actividad 4 - Cálculo de área y perímetro de un círculo")
+
+radio = float(input("Ingrese el radio del círculo: "))
+
+#Llamada a función auxiliar
+area = calcular_area_circulo(radio)
+perimetro = calcular_perimetro_circulo(radio)
+
+# Se establecen dos decimales para el área y perímetro
+print(Fore.GREEN + f"El área del círculo es: {area:.2f}")
+print(Fore.GREEN + f"El perímetro del círculo es: {perimetro:.2f}")
+
+
+
+
 
 
 
