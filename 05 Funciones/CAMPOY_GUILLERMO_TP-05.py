@@ -117,6 +117,11 @@ def celsius_a_fahrenheit(celsius):
     fahrenheit = (celsius * 9/5) + 32
     return fahrenheit
 
+def calcular_promedio(valor_1, valor_2, valor_3):
+    # Función que calcula el promedio de tres valores
+    promedio = (valor_1 + valor_2 + valor_3) / 3
+    return promedio
+
 ## Programa principal
 print_header()
 
@@ -214,5 +219,16 @@ fahrenheit = celsius_a_fahrenheit (celsius)
 # Presentación de resultados
 # Se establece dos decimales para la conversión
 print(Fore.GREEN + f"{celsius}°C son {fahrenheit:.2f}°F")
+
+# Ejercicio 10 cálculo de promedio
+print_separator("Actividad 10 - Cálculo de promedio")
+valor_1 = float(input("Ingrese el primer valor: "))
+valor_2 = float(input("Ingrese el segundo valor: "))
+valor_3 = float(input("Ingrese el tercer valor: "))
+
+promedio = calcular_promedio(valor_1, valor_2, valor_3)
+
+#Presentación de resultados
+print(Fore.GREEN + f"El promedio de los tres valores es: {promedio:.2f}")
 
 print_footer()
