@@ -66,6 +66,11 @@ def calcular_perimetro_circulo(radio):
     perimetro = (2 * math.pi * radio)
     return perimetro
 
+def segundos_a_horas(segundos):
+    # Función que convierte segundos a horas
+    horas = segundos / 3600
+    return horas
+
 ## Programa principal
 print_header()
 
@@ -104,6 +109,15 @@ perimetro = calcular_perimetro_circulo(radio)
 # Se establecen dos decimales para el área y perímetro
 print(Fore.GREEN + f"El área del círculo es: {area:.2f}")
 print(Fore.GREEN + f"El perímetro del círculo es: {perimetro:.2f}")
+
+# Ejercicio 5 conversión de segundos a horas
+print_separator("Actividad 5 - Conversión de segundos a horas")
+segundos = int(input("Ingrese la cantidad de segundos: "))
+
+#Llamada a función auxiliar
+horas = segundos_a_horas(segundos)
+
+print(Fore.GREEN + f"{segundos} segundos son {horas} horas.")
 
 
 
