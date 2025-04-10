@@ -88,6 +88,35 @@ def operaciones_basicas(primer_numero, segundo_numero):
 
     return suma, resta, multiplicacion, division
 
+def calcular_imc(peso, altura):
+    # Función que calcula el IMC (Índice de Masa Corporal)
+    imc = peso / (altura ** 2)
+    return imc
+
+def imprimir_imc(imc):
+# Clasificación del IMC
+# Según la Organización Mundial de la Salud (OMS): 
+# Referencia https://www.tuasaude.com/es/imc/
+
+#Bajo peso	Menos de 18,4 
+#Peso normal	Entre 18,5 y 24,9
+#Sobrepeso	Entre 25 y 29,9
+#Obesidad	30 o más
+
+    if imc < 18.5:
+        print(Fore.YELLOW + "Clasificación - Bajo peso")
+    elif 18.5 <= imc < 24.9: 
+        print(Fore.GREEN + "Clasificación - Peso normal")
+    elif 25 <= imc < 29.9:
+        print(Fore.YELLOW + "Clasificación - Sobrepeso")
+    else:
+        print(Fore.RED + "Clasificación - Obesidad")     
+
+def celsius_a_fahrenheit(celsius):
+    # Función que convierte Celsius a Fahrenheit
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+
 ## Programa principal
 print_header()
 
@@ -161,11 +190,29 @@ if segundo_numero != 0:
 else:
     print(Fore.RED + "Error, no es posible división por cero")
 
+# Ejercicio 8 calculo e IMC
+print_separator("Actividad 8 - Cálculo de IMC")
+peso = float(input("Ingrese su peso en kg: "))
+altura = float(input("Ingrese su altura en metros: "))
 
+# Llamada a función auxiliar
+imc = calcular_imc(peso, altura)
 
+# Presentación de resultados
+print(Fore.GREEN + f"Su IMC es: {imc:.2f}")
 
+# Llamada a función auxiliar para imprimir el IMC
+imprimir_imc (imc)
 
+# Ejericio 9 conversión de celsius a fahrenheit
+print_separator("Actividad 9 - Conversión Celsius a Fahrenheit")
+celsius = float(input("Ingrese la temperatura en Celsius: "))
 
+# Llamada a función auxiliar
+fahrenheit = celsius_a_fahrenheit (celsius) 
 
+# Presentación de resultados
+# Se establece dos decimales para la conversión
+print(Fore.GREEN + f"{celsius}°C son {fahrenheit:.2f}°F")
 
 print_footer()
