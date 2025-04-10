@@ -71,6 +71,14 @@ def segundos_a_horas(segundos):
     horas = segundos / 3600
     return horas
 
+def tabla_multiplicar(numero):
+    print()
+    # Función que imprime la tabla de multiplicar de un número
+    print(Fore.GREEN + f"Tabla de multiplicar del {numero}:")
+    for i in range(1, 11):
+        resultado = numero * i
+        print(Fore.GREEN + f"{numero} x {i} = {resultado}")
+
 ## Programa principal
 print_header()
 
@@ -117,9 +125,15 @@ segundos = int(input("Ingrese la cantidad de segundos: "))
 #Llamada a función auxiliar
 horas = segundos_a_horas(segundos)
 
-print(Fore.GREEN + f"{segundos} segundos son {horas} horas.")
+# Se establece dos decimales para la conversión
+print(Fore.GREEN + f"{segundos} segundos son {horas:.2f} horas.")
 
+# Ejercicio 6 tabla de multiplicar por pantalla para dato recibido por parámetro
+print_separator("Actividad 6 - Tabla de multiplicar")
+numero = int(input("Ingrese un número para mostrar su tabla de multiplicar: ")) 
 
+# Llamada a función auxiliar
+tabla_multiplicar(numero)
 
 
 
