@@ -79,6 +79,15 @@ def tabla_multiplicar(numero):
         resultado = numero * i
         print(Fore.GREEN + f"{numero} x {i} = {resultado}")
 
+def operaciones_basicas(primer_numero, segundo_numero):
+    # Función que realiza operaciones básicas entre dos números
+    suma = primer_numero + segundo_numero
+    resta = primer_numero - segundo_numero
+    multiplicacion = primer_numero * segundo_numero
+    division = primer_numero / segundo_numero if segundo_numero != 0 else "Error: División por cero"
+
+    return suma, resta, multiplicacion, division
+
 ## Programa principal
 print_header()
 
@@ -134,6 +143,25 @@ numero = int(input("Ingrese un número para mostrar su tabla de multiplicar: "))
 
 # Llamada a función auxiliar
 tabla_multiplicar(numero)
+
+# Ejercicio 7 operaciones basicas 
+print_separator("Actividad 7 - Operaciones básicas")
+primer_numero = float(input("Ingrese el primer número: "))
+segundo_numero = float(input("Ingrese el segundo número: "))
+
+# Llamadas a funciones auxiliares
+calculos = operaciones_basicas (primer_numero, segundo_numero)
+
+# Presentación de resultados
+print(Fore.GREEN + f"La suma es: {calculos[0]}")
+print(Fore.GREEN + f"La resta es: {calculos[1]}")  
+print(Fore.GREEN + f"La multiplicación es: {calculos[2]}")
+if segundo_numero != 0:
+    print(Fore.GREEN + f"La división es: {calculos[3]}")
+else:
+    print(Fore.RED + "Error, no es posible división por cero")
+
+
 
 
 
