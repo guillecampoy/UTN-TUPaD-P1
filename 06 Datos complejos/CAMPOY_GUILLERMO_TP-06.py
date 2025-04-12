@@ -82,3 +82,11 @@ print(Fore.YELLOW + Style.BRIGHT + "Frutas y precios (actualización ejercicio 2
 for fruta, precio in precios_frutas.items():
     print(Fore.GREEN + Style.BRIGHT + f"{fruta}: ${precio}")
 
+# Ejercicio 3 creación de lista solo con keys de diccionario
+print_separator("Actividad 3 - Lista de claves")
+# Se crea una lista con las claves del diccionario
+lista_frutas = list(precios_frutas.keys())
+print(Fore.YELLOW + Style.BRIGHT + "Lista de frutas:")
+for fruta in lista_frutas:
+    print(Fore.GREEN + Style.BRIGHT + fruta)
+
