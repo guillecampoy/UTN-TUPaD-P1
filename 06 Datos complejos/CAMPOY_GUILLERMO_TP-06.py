@@ -43,6 +43,16 @@ def print_footer():
 
 # clases
 
+class Persona:
+    # Clase Persona
+    def __init__(self, nombre, pais, edad):
+        self.nombre = nombre
+        self.pais = pais
+        self.edad = edad
+
+    def saludar (self):
+        return f"¡Hola! Soy {self.nombre}, vivo en {self.pais} y tengo {self.edad} años."
+
 # programa principal
 print_header()
 
@@ -90,3 +100,12 @@ print(Fore.YELLOW + Style.BRIGHT + "Lista de frutas:")
 for fruta in lista_frutas:
     print(Fore.GREEN + Style.BRIGHT + fruta)
 
+# Ejericio 4 uso de clase persona
+print_separator("Actividad 4 - Clase Persona")
+
+persona = Persona("Guillermo", "Argentina", 41)
+print(Fore.GREEN + Style.BRIGHT + persona.saludar())
+
+
+
+print_footer()
