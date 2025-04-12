@@ -2,7 +2,10 @@
 # Se utiliza un formato especial para dar color a la salida
 # Se importa la librería colorama para dar color a la salida
 
+# imports
 from colorama import init, Fore, Style
+import math
+
 # Inicializa Colorama
 init(autoreset=True)
 
@@ -52,6 +55,17 @@ class Persona:
 
     def saludar (self):
         return f"¡Hola! Soy {self.nombre}, vivo en {self.pais} y tengo {self.edad} años."
+
+class Circulo:
+    # Clase Circulo
+    def __init__(self, radio):
+        self.radio = radio
+
+    def calcular_area(self):
+        return math.pi * (self.radio ** 2)
+
+    def calcular_perimetro(self):
+        return 2 * math.pi * self.radio
 
 # programa principal
 print_header()
@@ -106,6 +120,17 @@ print_separator("Actividad 4 - Clase Persona")
 persona = Persona("Guillermo", "Argentina", 41)
 print(Fore.GREEN + Style.BRIGHT + persona.saludar())
 
+# Ejercicio 5 uso de clase circulo
+print_separator("Actividad 5 - Clase Circulo")
 
+# Se define un número arbitrario para el radio
+radio = 5
+circulo = Circulo(radio)
+area = circulo.calcular_area()
+perimetro = circulo.calcular_perimetro()
+
+print(Fore.YELLOW + Style.BRIGHT + f"Radio del círculo: {radio}")
+print(Fore.GREEN + Style.BRIGHT + f"Área del círculo: {area:.2f}")
+print(Fore.GREEN + Style.BRIGHT + f"Perímetro del círculo: {perimetro:.2f}")
 
 print_footer()
