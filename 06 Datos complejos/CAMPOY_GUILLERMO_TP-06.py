@@ -67,6 +67,24 @@ class Circulo:
     def calcular_perimetro(self):
         return 2 * math.pi * self.radio
 
+class Pila:
+    # Clase Pila
+    # Solo se define constructor y metodo de igualdad
+    # con una máscara dada
+
+    mascara = ["(", "{", "[", "]", "}", ")"]
+    def __init__(self, *elementos):
+        self.pila = list(elementos)
+
+    def ver_pila(self):
+        return self.pila
+    
+    def igual_a_mascara(self):
+        if self.pila == self.mascara:
+            return True
+        else:
+            return False
+
 # programa principal
 print_header()
 
@@ -132,5 +150,39 @@ perimetro = circulo.calcular_perimetro()
 print(Fore.YELLOW + Style.BRIGHT + f"Radio del círculo: {radio}")
 print(Fore.GREEN + Style.BRIGHT + f"Área del círculo: {area:.2f}")
 print(Fore.GREEN + Style.BRIGHT + f"Perímetro del círculo: {perimetro:.2f}")
+
+# Ejericio 6 determinar orden de caracteres en una pila
+print_separator("Actividad 6 - Orden de caracteres en una pila")
+
+# Se debe validar que el orden de los caracteres en la pila sea igual a la mascara
+# Se define la clase pila, con una mascara dada y metodo de igualdad
+pila_ordenada = Pila("(", "{", "[", "]", "}", ")")
+pila_desordenada = Pila("(", "{", "]", "}", ")", "[")
+otra_pila_desordenada = Pila("(", "{", "[", "}", "}", "}")
+
+print(Fore.YELLOW + Style.BRIGHT + "Resultados Pilas dadas:")
+print()
+print(Fore.BLUE + Style.BRIGHT + "Primer Pila:")
+print(Fore.YELLOW + Style.BRIGHT + str(pila_ordenada.ver_pila()))
+if pila_ordenada.igual_a_mascara():
+    print(Fore.GREEN + Style.BRIGHT + "La pila está ordenada correctamente.")
+else:
+    print(Fore.RED + Style.BRIGHT + "La pila no está ordenada correctamente.")
+
+print()
+print(Fore.BLUE + Style.BRIGHT + "Segunda Pila:")
+print(Fore.YELLOW + Style.BRIGHT + str(pila_desordenada.ver_pila()))
+if pila_desordenada.igual_a_mascara():
+    print(Fore.GREEN + Style.BRIGHT + "La pila está ordenada correctamente.")
+else:
+    print(Fore.RED + Style.BRIGHT + "La pila no está ordenada correctamente.")
+
+print()
+print(Fore.BLUE + Style.BRIGHT + "Tercera Pila:")
+print(Fore.YELLOW + Style.BRIGHT + str(otra_pila_desordenada.ver_pila()))
+if otra_pila_desordenada.igual_a_mascara():
+    print(Fore.GREEN + Style.BRIGHT + "La pila está ordenada correctamente.")
+else:
+    print(Fore.RED + Style.BRIGHT + "La pila no está ordenada correctamente.")
 
 print_footer()
