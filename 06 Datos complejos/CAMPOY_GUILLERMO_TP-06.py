@@ -71,3 +71,14 @@ print(Fore.YELLOW + Style.BRIGHT + "Frutas y precios (estado final):")
 for fruta, precio in precios_frutas.items():
     print(Fore.GREEN + Style.BRIGHT + f"{fruta}: ${precio}")
 
+# Ejercicio 2 continuación punto 1 con actualización de precios
+print_separator("Actividad 2 - Actualización de precios")
+
+precios_frutas['Banana'] = 1330
+precios_frutas['Manzana'] = 1700
+precios_frutas['Melón'] = 2800
+print()
+print(Fore.YELLOW + Style.BRIGHT + "Frutas y precios (actualización ejercicio 2):")
+for fruta, precio in precios_frutas.items():
+    print(Fore.GREEN + Style.BRIGHT + f"{fruta}: ${precio}")
+
