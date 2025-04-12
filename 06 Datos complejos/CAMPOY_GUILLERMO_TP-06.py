@@ -30,11 +30,14 @@ def print_header():
     print(Fore.CYAN + Style.BRIGHT + "=" * 60)
 print()
 
-def print_separator(title="Resultado"):
+def print_separator(title="Ejercicio XXX"):
+    # Espacio en blanco
+    print()
     # Imprime un separador con el título dado
     print(Fore.YELLOW + "-" * 60)
     print(Fore.YELLOW + f"{title.center(60)}")
     print(Fore.YELLOW + "-" * 60)
+
 
 def print_footer():
     # Imprime el pie de página del programa
@@ -84,6 +87,29 @@ class Pila:
             return True
         else:
             return False
+
+class Cola:
+    # Clase Cola
+    def __init__(self):
+        self.cola = []
+
+    def agregar_cliente(self, elemento):
+        self.cola.append(elemento)
+
+    def atender_cliente(self):
+        if self.cola:
+            return self.cola.pop(0)
+        else:
+            return None
+
+    def ver_cola(self):
+        return self.cola
+    
+    def siguiente_cliente(self):
+        if self.cola:
+            return self.cola[0]
+        else:
+            return None
 
 # programa principal
 print_header()
@@ -184,5 +210,31 @@ if otra_pila_desordenada.igual_a_mascara():
     print(Fore.GREEN + Style.BRIGHT + "La pila está ordenada correctamente.")
 else:
     print(Fore.RED + Style.BRIGHT + "La pila no está ordenada correctamente.")
+
+# Ejercicio 7 uso de Cola para simular atención en un lugar
+print_separator("Actividad 7 - Uso de Cola")
+
+#inicializamos una nueva cola vacía
+cola_clientes = Cola()
+
+# Agregamos clientes a la cola
+cola_clientes.agregar_cliente("Cliente 1")
+cola_clientes.agregar_cliente("Cliente 2")
+cola_clientes.agregar_cliente("Cliente 3")
+cola_clientes.agregar_cliente("Cliente 4")
+cola_clientes.agregar_cliente("Cliente 5")
+
+#Listado estado actual de cola
+print(Fore.YELLOW + Style.BRIGHT + "Estado actual de la cola:")
+print(Fore.BLUE + Style.BRIGHT + str(cola_clientes.ver_cola()))
+
+print()
+#Atender cliente
+cola_clientes.atender_cliente()
+print(Fore.YELLOW + Style.BRIGHT + "Atención de cliente en curso...")
+
+#siguiente en la fila
+print(Fore.BLUE + Style.BRIGHT + "Siguiente cliente en la cola:")
+print(Fore.GREEN + Style.BRIGHT + str(cola_clientes.siguiente_cliente()))
 
 print_footer()
