@@ -260,7 +260,7 @@ cola_clientes.agregar_cliente("Cliente 5")
 
 #Listado estado actual de cola
 print(Fore.YELLOW + Style.BRIGHT + "Estado actual de la cola:")
-print(Fore.BLUE + Style.BRIGHT + str(cola_clientes.ver_cola()))
+print(Fore.BLUE + Style.BRIGHT + f"{cola_clientes.ver_cola()}")
 
 print()
 #Atender cliente
@@ -269,7 +269,7 @@ print(Fore.YELLOW + Style.BRIGHT + "Atención de cliente en curso...")
 
 #siguiente en la fila
 print(Fore.BLUE + Style.BRIGHT + "Siguiente cliente en la cola:")
-print(Fore.GREEN + Style.BRIGHT + str(cola_clientes.siguiente_cliente()))
+print(Fore.GREEN + Style.BRIGHT + f"{cola_clientes.siguiente_cliente()}")
 
 # Ejericio 8 uso de lista enlazada
 print_separator("Actividad 8 - Uso de lista enlazada")
