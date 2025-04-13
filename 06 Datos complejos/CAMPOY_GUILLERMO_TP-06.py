@@ -127,10 +127,22 @@ class ListaEnlazada:
 
     def mostrar(self):
         actual = self.cabeza
-        while actual:
+        while actual:  # Traverse the list, reversing the direction of the links one node at a time
             print(actual.dato, end=' --> ')
             actual = actual.siguiente
         print("None")
+    
+    def invertir_lista(self):
+        anterior = None
+        actual = self.cabeza
+
+        while actual:
+            siguiente = actual.siguiente # Guardar el siguiente nodo   
+            actual.siguiente = anterior # Invertir el enlace  
+            anterior = actual  # Mover el puntero anterior hacia adelante
+            actual = siguiente  # Mover el puntero actual hacia adelante
+
+        self.cabeza = anterior  # Actualizar la cabeza de la lista
 
 
 # programa principal
@@ -273,5 +285,17 @@ lista_enlazada.insertar("Elemento 0")
 #presentamos la lista enlazada
 print(Fore.GREEN + Style.BRIGHT + "Lista enlazada:")
 lista_enlazada.mostrar()
+
+# Ejercicio 9 implementar funcion para invertir lista enlazada
+print_separator("Actividad 9 - Invertir lista enlazada")
+
+# Tomamos la lista ya cargada del ejercicio 8 y la invertimos
+lista_invertida = ListaEnlazada()
+
+# Realizamos una copia de la lista anterior
+lista_invertida = lista_enlazada
+lista_invertida.invertir_lista()
+print(Fore.GREEN + Style.BRIGHT + "Lista enlazada invertida:")
+lista_invertida.mostrar()
 
 print_footer()
