@@ -4,6 +4,7 @@
 
 # imports
 from colorama import init, Fore, Style
+from collections import deque
 import math
 
 # Inicializa Colorama
@@ -89,27 +90,26 @@ class Pila:
             return False
 
 class Cola:
-    # Clase Cola
+    # Clase con uso de claso deque
+    # Se utiliza deque para implementar la cola
+
     def __init__(self):
-        self.cola = []
+        self.elementos = deque() 
 
     def agregar_cliente(self, elemento):
-        self.cola.append(elemento)
+        self.elementos.append(elemento)
 
     def atender_cliente(self):
-        if self.cola:
-            return self.cola.pop(0)
-        else:
-            return None
+        return self.elementos.popleft() if not self.esta_vacia() else "La cola está vacía"
 
+    def esta_vacia(self):
+        return len(self.elementos) == 0
+    
     def ver_cola(self):
-        return self.cola
+        return self.elementos
     
     def siguiente_cliente(self):
-        if self.cola:
-            return self.cola[0]
-        else:
-            return None
+        return self.elementos[0] if not self.esta_vacia() else "La cola está vacía"
 
 # programa principal
 print_header()
