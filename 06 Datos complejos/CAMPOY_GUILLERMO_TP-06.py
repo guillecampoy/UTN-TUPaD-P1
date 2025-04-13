@@ -111,6 +111,28 @@ class Cola:
     def siguiente_cliente(self):
         return self.elementos[0] if not self.esta_vacia() else "La cola está vacía"
 
+class Nodo:
+    def __init__(self, dato):
+        self.dato = dato  
+        self.siguiente = None  
+
+class ListaEnlazada:
+    def __init__(self):
+        self.cabeza = None  
+
+    def insertar(self, dato):
+        nuevo_nodo = Nodo(dato)
+        nuevo_nodo.siguiente = self.cabeza
+        self.cabeza = nuevo_nodo
+
+    def mostrar(self):
+        actual = self.cabeza
+        while actual:
+            print(actual.dato, end=' --> ')
+            actual = actual.siguiente
+        print("None")
+
+
 # programa principal
 print_header()
 
@@ -236,5 +258,20 @@ print(Fore.YELLOW + Style.BRIGHT + "Atención de cliente en curso...")
 #siguiente en la fila
 print(Fore.BLUE + Style.BRIGHT + "Siguiente cliente en la cola:")
 print(Fore.GREEN + Style.BRIGHT + str(cola_clientes.siguiente_cliente()))
+
+# Ejericio 8 uso de lista enlazada
+print_separator("Actividad 8 - Uso de lista enlazada")
+
+lista_enlazada = ListaEnlazada()
+lista_enlazada.insertar("Elemento 5")
+lista_enlazada.insertar("Elemento 4")
+lista_enlazada.insertar("Elemento 3")
+lista_enlazada.insertar("Elemento 2")
+lista_enlazada.insertar("Elemento 1")
+lista_enlazada.insertar("Elemento 0")
+
+#presentamos la lista enlazada
+print(Fore.GREEN + Style.BRIGHT + "Lista enlazada:")
+lista_enlazada.mostrar()
 
 print_footer()
