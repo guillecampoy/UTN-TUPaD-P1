@@ -72,6 +72,19 @@ antepenultimo_elemento = elementos_aleatorios[-3]
 print(Fore.GREEN + f"Antepenúltimo elemento: ")
 print(f"{antepenultimo_elemento}")
 
+# Ejercicoo 3
+# Generar una lista vacía y luego agregar 3 valores aleatorios a la misma
+print_separator("Actividad 3 - Lista vacía y agregar valores aleatorios")
+lista = []
+# Agregar 3 valores aleatorios (strings con sentido)
+valores_aleatorios = ['UTN', 'Progra I', 'Python']
+for valor in valores_aleatorios:
+    lista.append(valor)
+# Mostrar la lista generada
+print(Fore.GREEN + "Lista generada: ")
+print(f"{lista}")
+
+
 
 
 
