@@ -99,6 +99,45 @@ print()
 print(Fore.CYAN + "Nueva lista con cambiios: ")
 print(Fore.GREEN + f"{lista_animales}")
 
+# Ejercicio 5
+# Dado un bloque de código indicar con tus palabras que hace
+print_separator("Actividad 5 - ¿Qué hace este código?")
+bloque_codigo = "numeros = [8, 15, 3, 22, 7]\n" \
+                "numeros.remove(max(numeros)\n" \
+                "print(numeros)"
+print("Bloque de código: ")
+print(Fore.CYAN + bloque_codigo)
+print()
+print(Fore.GREEN + "Descripción: ")
+print(Fore.GREEN + "1. Crea una lista llamada 'numeros' con los valores 8, 15, 3, 22, 7\n"
+    "2. Determina el elemento mayor de la lista y lo remueve.\n"
+    "4. Imprime la lista resultante.")
+
+# Ejercicio 6
+# Definir una lista con los números del 10 al 30(incluído), 
+# con saltos de 5 en 5 y mostrar por pantalla los dos primeros elementos 
+print_separator("Actividad 6 - Lista con saltos de 5 en 5")
+numeros_con_saltos = list(range(10, 31, 5))
+print(Fore.CYAN + "Lista de números del 10 al 30 con saltos de 5 en 5: ")
+print(f"{numeros_con_saltos}")
+print()
+print(Fore.GREEN + "Resultados:")
+print(f"Primer elemento: {numeros_con_saltos[0]}, segundo elemento: {numeros_con_saltos[1]}")
+
+# Ejercicio 7
+# Dada una lista de autos ["sedan", "polo", "suran", "gol"]
+# modificar el indice 1 y 2 por otros valores de autos, ejemplo "fiesta" y "focus"
+print_separator("Actividad 7 - Modificación de elementos en una lista")
+lista_autos = ["sedan", "polo", "suran", "gol"]
+print(Fore.CYAN + "Lista inicial: ")
+print(f"{lista_autos}")
+# Modificar el índice 1 y 2
+lista_autos[1] = "fiesta"
+lista_autos[2] = "focus"
+print()
+# Mostrar la lista generada
+print(Fore.CYAN + "Lista modificada: ")
+print(Fore.GREEN + f"{lista_autos}")
 
 
 
