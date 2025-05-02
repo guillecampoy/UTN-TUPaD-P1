@@ -56,6 +56,24 @@ print(Fore.GREEN + "Números múltiplos de 4: ")
 print(f"{multiplos_de_4}")
 
 
+# Ejercicio 2
+# Generar una lista con elementos aleatorios pero con sentido ejemplo,
+#  strings y mostrar el antepenúltimo elemento
+print_separator("Actividad 2 - Antepenúltimo elemento de una lista aleatoria")
+import random
+# Generar una lista de 10 elementos aleatorios
+elementos_aleatorios = [random.choice(['Hola', 42, 3.14, True, 'Mundo']) for _ in range(10)]
+# Mostrar la lista generada
+print(Fore.CYAN + "Lista de elementos aleatorios: ")
+print(f"{elementos_aleatorios}")
+print()
+# Mostrar el antepenúltimo elemento, sabiendo que tenemos una lista de 10 elementos
+antepenultimo_elemento = elementos_aleatorios[-3]
+print(Fore.GREEN + f"Antepenúltimo elemento: ")
+print(f"{antepenultimo_elemento}")
+
+
+
 
 
 
