@@ -84,6 +84,20 @@ for valor in valores_aleatorios:
 print(Fore.GREEN + "Lista generada: ")
 print(f"{lista}")
 
+# Ejercicio 4
+# Dada la lista inicial ["perro", "gato", "conejo", "pez"], 
+# reemplazar el segundo y el último por "loro" y "oso" respectivamente
+print_separator("Actividad 4 - Reemplazo de elementos en una lista")
+lista_animales = ["perro", "gato", "conejo", "pez"]
+print(Fore.CYAN + "Lista inicial: ")
+print(f"{lista_animales}")
+# Reemplazar el segundo elemento (índice 1) y el último (índice -1)
+lista_animales[1] = "loro"
+lista_animales[-1] = "oso"
+print()
+# Mostrar la lista generada
+print(Fore.CYAN + "Nueva lista con cambiios: ")
+print(Fore.GREEN + f"{lista_animales}")
 
 
 
