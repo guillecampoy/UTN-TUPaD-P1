@@ -139,6 +139,17 @@ print()
 print(Fore.CYAN + "Lista modificada: ")
 print(Fore.GREEN + f"{lista_autos}")
 
+# Ejercicio 8
+# Crear una lista vacía llamada "dobles" y agregar el doble de 5,10 y 15 usando append()
+# Mostrar la lista generada
+print_separator("Actividad 8 - Lista de dobles")
+dobles = []
+# Agregar el doble de 5, 10 y 15
+for num in [5, 10, 15]:
+    dobles.append(num * 2)
+# Mostrar la lista generada
+print(Fore.CYAN + "Lista de dobles: ")
+print(Fore.GREEN + f"{dobles}")
 
 
 
