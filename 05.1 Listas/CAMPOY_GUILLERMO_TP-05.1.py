@@ -151,7 +151,50 @@ for num in [5, 10, 15]:
 print(Fore.CYAN + "Lista de dobles: ")
 print(Fore.GREEN + f"{dobles}")
 
+# Ejercicio 9
+# Ejercicio con listas anidadas, representando una lista con las compras de diferentes clientes
+print_separator("Actividad 9 - Compras de diferentes clientes")
+compras = [
+    ["pan", "leche"],
+    ["arroz", "fideos", "salsa"],
+    ["agua"]
+]
+# Imprimir lista de compras original
+print(Fore.CYAN + "Lista de compras original: ")
+for i, cliente in enumerate(compras):
+    print(f"Cliente {i + 1}: {cliente}")
 
+# Ejecutar las siguientes acciones:
+# 1. Agregar "jugo" a la lista del tercer cliente
+compras[2].append("jugo")
+# 2. Reemplazar "fideos" por "tallarines" en la lista del segundo cliente
+compras[1][1] = "tallarines"
+# 3. Eliminar "pan" de la lista del primero cliente
+compras[0].remove("pan")
+# 4. Imprimir lista resultante
+print()
+print(Fore.GREEN + "Lista de compras modificada: ")
+for i, cliente in enumerate(compras):
+    print(f"Cliente {i + 1}: {cliente}")
 
+# Ejercicio 10
+# Listas anidadas: Elaborar una lista anidada "lista_anidada" que contenga los siguientes elementos:
+# Posición lista_anidada[0]: 15
+# Posición lista_anidada[1]: True
+# Posición lista_anidada[2][0]: 25.5
+# Posición lista_anidada[2][1]: 57.9
+# Posición lista_anidada[2][2]: 30.6
+# Posición lista_anidada[3]: False
+# Imprimir la lista resultante por pantalla.
+print_separator("Actividad 10 - Lista anidada")
+lista_anidada = [
+    15,
+    True,
+    [25.5, 57.9, 30.6],
+    False
+]
+# Imprimir la lista resultante
+print(Fore.CYAN + "Lista anidada: ")
+print(Fore.GREEN + f"{lista_anidada}")
 
 print_footer()
