@@ -178,6 +178,65 @@ if es_palindromo_recursivo(calculo_palindromo):
 else:
     print(Fore.RED + f"La palabra '{calculo_palindromo}' no es un palíndromo.")
 
+# Ejercicio 6
+'''Escribí una función recursiva en Python llamada suma_digitos(n) que reciba un 
+número entero positivo y devuelva la suma de todos sus dígitos'''
+print_separator("Actividad 6 - Suma de Dígitos Recursiva")
+def suma_digitos_recursiva(numero):
+    # Caso base: si el número es 0, la suma de sus dígitos es 0
+    if numero == 0:
+        return 0
+    else:
+        # Sumar el último dígito y llamar recursivamente con el número sin el último dígito
+        return (numero % 10) + suma_digitos_recursiva(numero // 10)
+# Solicitar al usuario un número entero positivo
+calculo_suma_digitos = input("Ingrese un número entero positivo para calcular la suma de sus dígitos: ")
+entero_valido_suma_digitos = validar_entero_positivo(calculo_suma_digitos)
+resultado_suma_digitos = suma_digitos_recursiva(entero_valido_suma_digitos)
+print(Fore.GREEN + f"La suma de los dígitos de {entero_valido_suma_digitos} es: {resultado_suma_digitos}")
 
+# Ejercicio 7
+'''Un niño está construyendo una pirámide con bloques. En el nivel más bajo coloca n 
+bloques, en el siguiente nivel uno menos (n - 1), y así sucesivamente hasta llegar al 
+último nivel con un solo bloque. 
+Escribí una función recursiva contar_bloques(n) que reciba el número de bloques en el 
+nivel más bajo y devuelva el total de bloques que necesita para construir toda la 
+pirámide'''
+print_separator("Actividad 7 - Contar Bloques Recursivo")
+def contar_bloques_recursivo(n):
+    # Caso base: si no hay bloques, no hay pirámide
+    if n <= 0:
+        return 0
+    else:
+        # Sumar el número de bloques en el nivel actual y llamar recursivamente para el siguiente nivel
+        return n + contar_bloques_recursivo(n - 1)
+# Solicitar al usuario el número de bloques en el nivel más bajo
+calculo_bloques = input("Ingrese el número de bloques en el nivel más bajo de la pirámide: ")
+entero_valido_bloques = validar_entero_positivo(calculo_bloques)
+resultado_bloques = contar_bloques_recursivo(entero_valido_bloques)
+print(Fore.GREEN + f"El total de bloques necesarios para construir la pirámide con {entero_valido_bloques} bloques en el nivel más bajo es: {resultado_bloques}")
+
+# Ejercico 8
+'''Escribí una función recursiva llamada contar_digito(numero, digito) que reciba un 
+número entero positivo (numero) y un dígito (entre 0 y 9), y devuelva cuántas veces 
+aparece ese dígito dentro del número.'''
+print_separator("Actividad 8 - Contar Dígito Recursivo")
+def contar_digito_recursivo(numero, digito):
+    # Caso base: si el número es 0, no hay más dígitos que contar
+    if numero == 0:
+        return 0
+    else:
+        # Verificar si el último dígito es igual al dígito buscado
+        if numero % 10 == digito:
+            return 1 + contar_digito_recursivo(numero // 10, digito)
+        else:
+            return contar_digito_recursivo(numero // 10, digito)
+# Solicitar al usuario un número entero positivo y un dígito
+calculo_contar_digito = input("Ingrese un número entero positivo: ")
+entero_valido_contar_digito = validar_entero_positivo(calculo_contar_digito)
+digito = input("Ingrese un dígito (0-9) para contar cuántas veces aparece en el número: ")
+digito_valido = validar_entero_positivo(digito)
+resultado_contar_digito = contar_digito_recursivo(entero_valido_contar_digito, digito_valido)
+print(Fore.GREEN + f"El dígito {digito_valido} aparece {resultado_contar_digito} veces en el número {entero_valido_contar_digito}.")
 
 print_footer()
